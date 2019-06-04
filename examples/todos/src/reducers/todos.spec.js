@@ -18,6 +18,7 @@ describe('todos reducer', () => {
       {
         text: 'Run the tests',
         completed: false,
+        priority: 'Normal',
         id: 0
       }
     ])
@@ -27,6 +28,7 @@ describe('todos reducer', () => {
         {
           text: 'Run the tests',
           completed: false,
+          priority: 'Normal',
           id: 0
         }
       ], {
@@ -38,10 +40,12 @@ describe('todos reducer', () => {
       {
         text: 'Run the tests',
         completed: false,
+        priority: 'Normal',
         id: 0
       }, {
         text: 'Use Redux',
         completed: false,
+        priority: 'Normal',
         id: 1
       }
     ])
@@ -51,10 +55,12 @@ describe('todos reducer', () => {
         {
           text: 'Run the tests',
           completed: false,
+                  priority: 'Normal',
           id: 0
         }, {
           text: 'Use Redux',
           completed: false,
+          priority: 'Normal',
           id: 1
         }
       ], {
@@ -66,14 +72,17 @@ describe('todos reducer', () => {
       {
         text: 'Run the tests',
         completed: false,
+        priority: 'Normal',
         id: 0
       }, {
         text: 'Use Redux',
         completed: false,
+        priority: 'Normal',
         id: 1
       }, {
         text: 'Fix the tests',
         completed: false,
+        priority: 'Normal',
         id: 2
       }
     ])
@@ -103,6 +112,36 @@ describe('todos reducer', () => {
       }, {
         text: 'Use Redux',
         completed: false,
+        id: 0
+      }
+    ])
+  })
+
+  it('should handle CHOOSE_PRIORITY', () => {
+    expect(
+      todos([
+        {
+          text: 'Run the tests',
+          priority: 'Normal',
+          id: 1
+        }, {
+          text: 'Use Redux',
+          priority: 'Normal',
+          id: 0
+        }
+      ], {
+        type: 'CHOOSE_PRIORITY',
+        id: 1,
+        value: 'High'
+      })
+    ).toEqual([
+      {
+        text: 'Run the tests',
+        priority: 'High',
+        id: 1
+      }, {
+        text: 'Use Redux',
+        priority: 'Normal',
         id: 0
       }
     ])

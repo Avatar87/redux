@@ -23,13 +23,13 @@ const Footer = () => (
       }}
     >
       <span>Show by priority: </span>
-      <FilterCheckbox filter={VisibilityFilters.SHOW_HIGH}>
+      <FilterCheckbox filter={[VisibilityFilters.SHOW_HIGH, VisibilityFilters.HIDE_HIGH]}>
         High
       </FilterCheckbox>
-      <FilterCheckbox filter={VisibilityFilters.SHOW_NORMAL}>
+      <FilterCheckbox filter={[VisibilityFilters.SHOW_NORMAL, VisibilityFilters.HIDE_NORMAL]}>
         Normal
       </FilterCheckbox>
-      <FilterCheckbox filter={VisibilityFilters.SHOW_LOW}>
+      <FilterCheckbox filter={[VisibilityFilters.SHOW_LOW, VisibilityFilters.HIDE_LOW]}>
         Low
       </FilterCheckbox>
     </div>

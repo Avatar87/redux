@@ -5,10 +5,11 @@ const Checkbox = ({ checked, children, onChange }) => (
   <span>
     <input type = "checkbox" 
        onChange={onChange}
+       defaultChecked={true}
        style={{
-           marginLeft: '4px',
+          marginLeft: '4px',
        }}
-       defaultChecked
+       className={'checkbox'}
     />
     {children}
   </span>

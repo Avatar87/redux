@@ -22,4 +22,11 @@ describe('todo actions', () => {
       id: 1
     })
   })
+
+  it('choosePriority should create CHOOSE_PRIORITY action', () => {
+    expect(actions.choosePriority(1)).toEqual({
+      type: 'CHOOSE_PRIORITY',
+      id: 1
+    })
+  })
 })
