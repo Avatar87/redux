@@ -15,8 +15,17 @@ export const toggleTodo = id => ({
   id
 })
 
+export const choosePriority = (id, value) => ({
+  type: 'CHOOSE_PRIORITY',
+  id,
+  value
+})
+
 export const VisibilityFilters = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
+  SHOW_ACTIVE: 'SHOW_ACTIVE',
+  SHOW_HIGH: 'SHOW_HIGH',
+  SHOW_NORMAL: 'SHOW_NORMAL',
+  SHOW_LOW: 'SHOW_LOW'
 }
